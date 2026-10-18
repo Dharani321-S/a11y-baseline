@@ -1,0 +1,13 @@
+{
+  "name": "a11y-baseline",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Accessibility baseline audit of tn.gov.in and an accessible full-stack project foundation",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "test": "npm run test -w server",
+    "lint": "echo \"add eslint + eslint-plugin-jsx-a11y / axe later\""
+  }
+}

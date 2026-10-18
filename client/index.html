@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Citizen Service Request</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <h1>Citizen Service Request</h1>
+    <nav aria-label="Language">
+      <a href="#" lang="ta" hreflang="ta">தமிழ்</a>
+      <a href="#" lang="en" hreflang="en" aria-current="true">English</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Error summary: moved into focus on failed submit (WCAG 3.3.1, 3.3.3) -->
+    <div id="error-summary" role="alert" tabindex="-1" hidden>
+      <h2>There is a problem</h2>
+      <ul></ul>
+    </div>
+
+    <form id="request-form" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+        <p class="error" id="name-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <p class="hint" id="email-hint">We will send the reference number here.</p>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+        <p class="error" id="email-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="category">Service category</label>
+        <select id="category" name="category" required aria-describedby="category-error">
+          <option value="">Select a category</option>
+          <option value="ration">Ration card</option>
+          <option value="patta">Patta / Chitta</option>
+          <option value="certificate">Certificates</option>
+        </select>
+        <p class="error" id="category-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="details">Describe your request</label>
+        <textarea id="details" name="details" rows="5" required aria-describedby="details-error"></textarea>
+        <p class="error" id="details-error" hidden></p>
+      </div>
+
+      <button type="submit">Submit request</button>
+    </form>
+
+    <p id="status" role="status"></p>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
