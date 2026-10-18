@@ -1,7 +1,7 @@
 # Accessibility Baseline Audit: Government of Tamil Nadu portal (tn.gov.in)
 
 **Site audited:** https://tn.gov.in  
-**Date:** 18 Oct 2026  **Auditor:** <your name>  
+**Date:** 18 Oct 2026  **Auditor:** <Dharani S>  
 **Method:** Lighthouse (Chrome DevTools, Accessibility category, mobile + desktop) and a keyboard-only pass (see `tests/keyboard/keyboard-checklist.md`).
 
 > **Scope note:** Lighthouse findings are confirmed with screenshots. The keyboard-only pass was **not performed**, so no keyboard findings (skip link, focus visibility) are claimed. Recommended as follow-up.
